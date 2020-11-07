@@ -1,0 +1,29 @@
+Questões Prova 01 JAVA:
+
+O projeto disponibilizado possui um sistema para livrarias de cadastro de livros e autores. O projeto possui um Menu com as opções para amostragem, inserção, atualização e exclusão, porém o mesmo possui algumas funcionalidades incompletas ou com problemas.
+
+[01] - Termine as funcionalidades do Menu informadas:
+
+    a) Item '(5) Mostrar Todos os Autores'
+    b) Item '(8) Deletar Autores'
+
+[02] - Corrija os erros existentes nas funcionalidades abaixo para que as mesmas realizem corretamente o designado:
+
+    a) Item '(2) Cadastrar Novo Livro'
+    b) Item '(3) Alterar Dados do Livro'
+
+[03] - Implemente uma nova funcionalidade no Menu, esta deverá gerar e exportar um documento txt com os dados de todos os Autores.
+
+[04] - Modifique a funcionalidade de Mostrar Todos os Autores para mostrar a idade de cada Autor na lista
+
+[05] - Explique o padrão arquitetural e design de código empregado no código mostrando suas vantagens e desvantagens
+
+[06] - Deixe sua opinião em relação a metodologia empregada nesta avaliação (Opcional)
+
+
+Obs.: Sinta-se avontade em refatorar o código existente da maneira em que achar melhor. 
+
+
+
+   
+
