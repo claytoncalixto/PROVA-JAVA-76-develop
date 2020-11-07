@@ -2,7 +2,10 @@ package br.com.liax.bookstore.bo.impl;
 
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Date;
+
 
 import br.com.liax.bookstore.bo.AuthorBO;
 import br.com.liax.bookstore.facade.InputFacade;
@@ -45,7 +48,17 @@ public class AuthorBOImpl implements AuthorBO {
 
 	@Override
 	public void delete() throws SQLException {
-		outputFacade.print("Termine a funcionalidade.....");
+		Author author =  null;
+		outputFacade.print("Deletar Autores");
+		outputFacade.print("Digite o ID do autor:");
+		long id = inputFacade.nextLong();
+		if(author.equals(id)) {
+		    authorService.deleteById(id);
+		} else {
+				outputFacade.print("Não foi encontrado Autor para o ID informado. Por favor, insira um ID válido.");
+			}
+		
+
 	}
 
 	@Override
@@ -150,8 +163,26 @@ public class AuthorBOImpl implements AuthorBO {
 
 	@Override
 	public void findAll() throws SQLException {
-		outputFacade.print("Termine a funcionalidade.....");
+		this.findAll();
+		Author author = null;
+		outputFacade.print("Mostrar Todos os Autores");
+		do {			
+			long id = inputFacade.nextLong();
+			author = authorService.findById(id);
+			outputFacade.print(author.getId());
+			outputFacade.print(author.getName());
+			LocalDateTime dateNow1 = new LocalDateTime(null, null);
+			Date birthdate1 = author.getBirthdate();
+			Duration idade1 =  new Duration (dateNow1, birthdate1);	
+			idade1 = dateConversorHelper.convert(idade1);
+			outputFacade.print(idade1);
+			
+		}
+		while(author != null);
+		
 	}
+
+	
 
 	@Override
 	public Author findById() throws SQLException {

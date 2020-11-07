@@ -4,21 +4,23 @@ O projeto disponibilizado possui um sistema para livrarias de cadastro de livros
 
 [01] - Termine as funcionalidades do Menu informadas:
 
-    a) Item '(5) Mostrar Todos os Autores'
-    b) Item '(8) Deletar Autores'
+    a) Item '(5) Mostrar Todos os Autores' - OK
+    b) Item '(8) Deletar Autores' - OK
 
 [02] - Corrija os erros existentes nas funcionalidades abaixo para que as mesmas realizem corretamente o designado:
 
-    a) Item '(2) Cadastrar Novo Livro'
-    b) Item '(3) Alterar Dados do Livro'
+    a) Item '(2) Cadastrar Novo Livro' - OK
+    b) Item '(3) Alterar Dados do Livro' - OK
 
-[03] - Implemente uma nova funcionalidade no Menu, esta deverá gerar e exportar um documento txt com os dados de todos os Autores.
+[03] - Implemente uma nova funcionalidade no Menu, esta deverá gerar e exportar um documento txt com os dados de todos os Autores. - Ñ OK
 
-[04] - Modifique a funcionalidade de Mostrar Todos os Autores para mostrar a idade de cada Autor na lista
+[04] - Modifique a funcionalidade de Mostrar Todos os Autores para mostrar a idade de cada Autor na lista - Ñ OK
 
-[05] - Explique o padrão arquitetural e design de código empregado no código mostrando suas vantagens e desvantagens
+[05] - Explique o padrão arquitetural e design de código empregado no código mostrando suas vantagens e desvantagens - OK
+Resposta -> O padrão utilizado é uma junção de Facade, Factory e MVC com utilização nas camadas com Singleton, Repository e Services, com acesso a banco de dados por JDBC.
 
-[06] - Deixe sua opinião em relação a metodologia empregada nesta avaliação (Opcional)
+[06] - Deixe sua opinião em relação a metodologia empregada nesta avaliação (Opcional) - OK
+Resposta-> Uma boa metodologia, clara e objetiva, não houve nada que fosse impossivel de realizar no que foi pedido. Falando por mim, o gap ficou mesmo do meu lado.
 
 
 Obs.: Sinta-se avontade em refatorar o código existente da maneira em que achar melhor. 

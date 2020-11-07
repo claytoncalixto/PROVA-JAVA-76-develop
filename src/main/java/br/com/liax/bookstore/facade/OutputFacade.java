@@ -5,4 +5,6 @@ public interface OutputFacade {
 	
 	void print(String value);
 
+	void print(long id);
+
 }

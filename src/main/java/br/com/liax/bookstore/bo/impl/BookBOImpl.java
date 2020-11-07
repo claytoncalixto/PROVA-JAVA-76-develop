@@ -131,20 +131,17 @@ public class BookBOImpl implements BookBO {
 
 		} while (!isValid);
 
+		Date releaseDate = null;
 		do {
 			outputFacade.print("Digite a data de nascimento do autor (Ex: 01/01/2020):");
 			String releaseDateStr = inputFacade.nextLine();
-			if (!releaseDateStr.isEmpty()) {
-				isValid = bookReleaseDateValidator.validate(releaseDateStr);
-				if (isValid) {
-					book.setReleaseDate(dateConversorHelper.convert(releaseDateStr));
-				} else {
-					outputFacade.print("Data de nascimento invalido");
-				}
+			isValid = bookReleaseDateValidator.validate(releaseDateStr);
+			if (isValid) {
+				outputFacade.print("Data de lançamento invalida");
 			} else {
-				isValid = false;
+				releaseDate = new SimpleDateFormat("dd/MM/yyyy").parse(releaseDateStr);
 			}
-		} while (!isValid);
+		} while (isValid);
 
 		book.setAuthor(authorBO.findById());
 		bookService.updateById(book);
@@ -191,7 +188,7 @@ public class BookBOImpl implements BookBO {
 			if (isValid) {
 				outputFacade.print("Data de lançamento invalida");
 			} else {
-				releaseDate = new SimpleDateFormat("KK/MM/yyyy").parse(releaseDateStr);
+				releaseDate = new SimpleDateFormat("dd/MM/yyyy").parse(releaseDateStr);
 			}
 		} while (isValid);
 

@@ -23,7 +23,7 @@ public class ConnectionSingleton {
 
 	private static Connection createConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		CONNECTION = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/BOOKSTORE", "root", "");
+		CONNECTION = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/BOOKSTORE", "root", "1234567");
 		return CONNECTION;
 	}
 
