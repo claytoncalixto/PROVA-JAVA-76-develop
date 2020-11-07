@@ -171,7 +171,7 @@ public class AuthorBOImpl implements AuthorBO {
 			author = authorService.findById(id);
 			outputFacade.print(author.getId());
 			outputFacade.print(author.getName());
-			LocalDateTime dateNow1 = new LocalDateTime(null, null);
+			Date dateNow1 = new Date();
 			Date birthdate1 = author.getBirthdate();
 			Duration idade1 =  new Duration (dateNow1, birthdate1);	
 			idade1 = dateConversorHelper.convert(idade1);
